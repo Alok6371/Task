@@ -38,7 +38,7 @@ const Check = () => {
             SetEven(false)
             SetOdd(false)
 
-        } 
+        }
 
         // const check = typeof (Number(input))
         // console.log(typeof (input));
@@ -75,47 +75,13 @@ const Check = () => {
                 {
                     even ?
                         < div className='row bg-green-400 p-3 rounded-lg'>
-                            <table className='m-3'>
-                                <thead className='font-bold'>Even Column</thead>
-                                <tr>
-                                    <th className='p-4'>Company</th>
-                                    <th className='p-4'>Contact</th>
-                                    <th className='p-4'>Country</th>
-                                </tr>
-                                <tr>
-                                    <td className='p-4'>Alfreds </td>
-                                    <td className='p-4'>Maria Anders</td>
-                                    <td className='p-4'>Germany</td>
-                                </tr>
-                                <tr>
-                                    <td className='p-4'>Centro </td>
-                                    <td className='p-4'>Francisco Chang</td>
-                                    <td className='p-4'>Mexico</td>
-                                </tr>
-                            </table>
+                            Even Column
                         </div> : ""
                 }
                 {
                     Odd ?
                         < div className='row bg-blue-400 p-3 rounded-lg'>
-                            <table className='m-3'>
-                                <thead className='font-bold'>Odd Column</thead>
-                                <tr className='p-3 '>
-                                    <th className='p-4'>Company</th>
-                                    <th className='p-4'>Contact</th>
-                                    <th className='p-4'>Country</th>
-                                </tr>
-                                <tr>
-                                    <td className='p-4'>Alfreds </td>
-                                    <td className='p-4'>Maria Anders</td>
-                                    <td className='p-4'>Germany</td>
-                                </tr>
-                                <tr>
-                                    <td className='p-4'>Centro </td>
-                                    <td className='p-4'>Francisco Chang</td>
-                                    <td className='p-4'>Mexico</td>
-                                </tr>
-                            </table>
+                            Odd Column
                         </div> : ""
 
                 }
