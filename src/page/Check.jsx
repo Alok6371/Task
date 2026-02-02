@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+
+
 const Check = () => {
     const [input, setInput] = useState()
     const [even, SetEven] = useState(false)
@@ -59,31 +61,38 @@ const Check = () => {
     }
 
     return (
-        <div className=''>
-            <div className='flex justify-center items-center mt-[5vh]  bg-blue-200 h-[10vh] '>
+        <div className=' flex flex-col items-center justify-center'>
+            <div className='flex justify-center items-center mt-[5vh] w-[70vw]  bg-blue-200 h-[10vh] '>
                 <form action="" onSubmit={handleSubmit}>
                     <input type="text"
                         value={(input)}
                         onChange={(e) => setInput(e.target.value)}
-                        className='border-2 border-black p-2 rounded-xl '
+                        className='border-2 border-black p-2 rounded-xl p-3 text-2xl '
                     />
                     <button type='submit' className='m-10 p-2 rounded-xl bg-blue-400'>
                         Submit
                     </button>
                 </form>
             </div>
-            <div className='flex gap-[10vh]'>
+            <div className='flex gap-[10vh] text-3xl mt-4'>
                 {
                     even ?
-                        < div className='row bg-green-400'>Even Column</div> : ""
+                        < div className='row bg-green-400 p-3 rounded-lg'>
+                            <table>
+                                <thead>Even Column</thead>
+
+                            </table>
+                        </div> : ""
                 }
                 {
                     Odd ?
-                        < div className='row bg-red-400'>Odd Column</div> : ""
+                        < div className='row bg-blue-400 p-3 rounded-lg'><table>
+                            <thead>Odd Column</thead>
+                        </table></div> : ""
 
                 }
                 {
-                    NonNumber ? <div>Not Number</div> : ""
+                    NonNumber ? <div className='row bg-red-400 p-3 rounded-lg'>Not Number</div> : ""
                 }
 
             </div>
