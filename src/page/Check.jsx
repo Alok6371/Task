@@ -69,7 +69,7 @@ const Check = () => {
                         onChange={(e) => setInput(e.target.value)}
                         className='border-2 border-black p-2 rounded-xl p-3 text-2xl '
                     />
-                    <button type='submit' className='m-10 p-2 rounded-xl bg-blue-400'>
+                    <button type='submit' className='m-10 p-3 rounded-xl bg-blue-400'>
                         Submit
                     </button>
                 </form>
