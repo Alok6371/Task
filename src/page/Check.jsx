@@ -62,14 +62,14 @@ const Check = () => {
 
     return (
         <div className=' flex flex-col items-center justify-center'>
-            <div className='flex justify-center items-center mt-[5vh] w-[70vw]  bg-blue-200 h-[10vh] '>
-                <form action="" onSubmit={handleSubmit}>
+            <div className='flex justify-center items-center mt-[5vh] w-[100vw] m-4  bg-blue-200 h-[100%] '>
+                <form action="" onSubmit={handleSubmit} className=''>
                     <input type="text"
                         value={(input)}
                         onChange={(e) => setInput(e.target.value)}
-                        className='border-2 border-black p-2 rounded-xl p-3 text-2xl '
+                        className='border-2 border-black p-2 rounded-xl  text-2xl '
                     />
-                    <button type='submit' className='m-10 p-3 rounded-xl bg-blue-400'>
+                    <button type='submit' className='mt-5 p-3 rounded-xl md:m-3 bg-blue-400'>
                         Submit
                     </button>
                 </form>
