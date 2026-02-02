@@ -180,6 +180,7 @@ const Check = () => {
                     <button type='submit ' className='bg-green-400 m-3 text-2xl p-4 rounded-lg'>
                         Submit
                     </button>
+
                 </form>
             </div>
             <div className='flex gap-5'>
