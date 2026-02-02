@@ -1,7 +1,4 @@
-
-
-
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Check = () => {
 
@@ -18,9 +15,13 @@ const Check = () => {
 
     const num = Number(input)
 
+    console.log(typeof (input))
+
+
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (isNaN(num)) {
+        
+        if (!Number.isInteger(num)) {
             setNonNumber(true)
             // setEven(false)
             // setOdd(false)
