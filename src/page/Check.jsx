@@ -38,10 +38,7 @@ const Check = () => {
             SetEven(false)
             SetOdd(false)
 
-        } else {
-            console.log("Number");
-
-        }
+        } 
 
         // const check = typeof (Number(input))
         // console.log(typeof (input));
@@ -63,7 +60,7 @@ const Check = () => {
     return (
         <div className=' flex flex-col items-center justify-center bg-gray-300'>
             <div className='flex justify-center items-center mt-[5vh] w-[100vw] m-4  bg-blue-200 h-[100%] '>
-                <form action="" onSubmit={handleSubmit} className=''>
+                <form action="" onSubmit={handleSubmit} className='m-3'>
                     <input type="text"
                         value={(input)}
                         onChange={(e) => setInput(e.target.value)}
