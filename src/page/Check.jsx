@@ -9,18 +9,32 @@ const Check = () => {
     const [nonNumber, setNonNumber] = useState(true)
 
 
-    const [evenValue, setEvenValue] = useState([])
-    const [oddValue, setOddValue] = useState([])
-    const [naNValue, setNanValue] = useState([])
+    const [evenValue, setEvenValue] = useState(() => {
+        const saveEven = localStorage.getItem("evenValues");
+        return saveEven ? JSON.parse(saveEven) : [];
+    }
+    )
+    const [oddValue, setOddValue] = useState(() => {
+        const saveOdd = localStorage.getItem("oddValue");
+        return saveOdd ? JSON.parse(saveOdd) : [];
+    })
+    const [naNValue, setNanValue] = useState(() => {
+        const saveNan = localStorage.getItem("NanValue");
+        return saveNan ? JSON.parse(saveNan) : [];
+    })
 
     const num = Number(input)
 
-    console.log(typeof (input))
+    useEffect  (() => {
+        localStorage.setItem("evenValues", JSON.stringify(evenValue));
+        localStorage.setItem("oddValue", JSON.stringify(oddValue));
+        localStorage.setItem("NanValue", JSON.stringify(naNValue))
+    }, [evenValue, oddValue, naNValue])
 
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        
+
         if (!Number.isInteger(num)) {
             setNonNumber(true)
             // setEven(false)
