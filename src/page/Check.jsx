@@ -83,14 +83,14 @@ const Check = () => {
                     <button type='submit ' className='bg-green-400 m-3 text-2xl p-4 rounded-lg'>
                         Submit
                     </button>
-                   
+
 
                 </form>
             </div>
-            <div className='flex gap-5'>
+            <div className='flex gap-5 '>
                 {
                     even ? (
-                        <div>
+                        <div className='bg-blue-300 rounded-lg p-3'>
                             <h3 className='font-bold'>Even Column Data</h3>
                             {
                                 evenValue.map((item, index) => (
@@ -102,7 +102,7 @@ const Check = () => {
                 }
                 {
                     odd ? (
-                        <div>
+                        <div className='bg-blue-300 rounded-lg p-3'>
                             <h3 className='font-bold'>Odd Column Data</h3>
                             {
                                 oddValue.map((item, index) => (
@@ -114,11 +114,11 @@ const Check = () => {
                 }
                 {
                     nonNumber ? (
-                        <div>
+                        <div className='bg-blue-300 rounded-lg p-3'>
                             <h3 className='font-bold'>Not Number Column Data</h3>
                             {
                                 naNValue.map((item, index) => (
-                                    <h3  className='text-2xl text-center' key={index}>{item.input}</h3>
+                                    <h3 className='text-2xl text-center' key={index}>{item.input}</h3>
                                 ))
                             }
                         </div>
