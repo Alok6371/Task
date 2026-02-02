@@ -1,103 +1,4 @@
-// import React, { useState } from 'react'
 
-// const Check = () => {
-//     const [input, setInput] = useState("")
-//     const [even, SetEven] = useState(false)
-//     const [Odd, SetOdd] = useState(false)
-//     const [NonNumber, SetNonNumber] = useState(false)
-
-//     const [evenColumnValue, setevenColumnValue] = useState([])
-//     const [OddColumnValue, setOddColumnValue] = useState([])
-//     const [nonNumberValue, setNonNumberValue] = useState([])
-
-//     const handleSubmit = (e) => {
-//         e.preventDefault()
-
-//         const num = Number(input)
-
-//         if (isNaN(num)) {
-//             SetNonNumber(true)
-//             SetEven(false)
-//             SetOdd(false)
-
-//             setNonNumberValue([
-//                 ...nonNumberValue,
-//                 { id: Date.now(), input }
-//             ])
-//         }
-//         else if (num % 2 === 0) {
-//             SetEven(true)
-//             SetOdd(false)
-//             SetNonNumber(false)
-
-//             setevenColumnValue([
-//                 ...evenColumnValue,
-//                 { id: Date.now(), input: num }
-//             ])
-//         }
-//         else {
-//             SetEven(false)
-//             SetOdd(true)
-//             SetNonNumber(false)
-
-//             setOddColumnValue([
-//                 ...OddColumnValue,
-//                 { id: Date.now(), input: num }
-//             ])
-//         }
-
-//         setInput("")
-//     }
-
-//     return (
-//         <div className='flex flex-col items-center justify-center bg-gray-300'>
-//             <form onSubmit={handleSubmit} className='m-3'>
-//                 <input
-//                     type="text"
-//                     value={input}
-//                     onChange={(e) => setInput(e.target.value)}
-//                     className='border-2 border-black mt-5 p-2 rounded-xl text-2xl'
-//                 />
-//                 <button type='submit' className='mt-5 p-2 rounded-xl text-2xl md:m-3 bg-blue-400'>
-//                     Submit
-//                 </button>
-//             </form>
-
-//             <div className='flex gap-10 mt-4'>
-
-//                 {even ? (
-//                     <div className='bg-green-400 p-3 rounded-lg'>
-//                         <h3>Even</h3>
-//                         {evenColumnValue.map((item) => (
-//                             <h3 key={item.id}>{item.input}</h3>
-//                         ))}
-//                     </div>
-//                 ) : ""}
-
-//                 {Odd ? (
-//                     <div className='bg-blue-400 p-3 rounded-lg'>
-//                         <h3>Odd</h3>
-//                         {OddColumnValue.map((item) => (
-//                             <h3 key={item.id}>{item.input}</h3>
-//                         ))}
-//                     </div>
-//                 ) : ""}
-
-//                 {NonNumber && (
-//                     <div className='bg-red-400 p-3 rounded-lg'>
-//                         <h3>Non Number</h3>
-//                         {nonNumberValue.map((item) => (
-//                             <h3 key={item.id}>{item.input}</h3>
-//                         ))}
-//                     </div>
-//                 )}
-
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Check
 
 
 import React, { useState } from 'react'
@@ -121,8 +22,8 @@ const Check = () => {
         e.preventDefault()
         if (isNaN(num)) {
             setNonNumber(true)
-            setEven(false)
-            setOdd(false)
+            // setEven(false)
+            // setOdd(false)
 
             setNanValue([
                 ...naNValue, {
@@ -133,8 +34,8 @@ const Check = () => {
         }
         else if (num % 2 === 0) {
             setEven(true)
-            setOdd(false)
-            setNonNumber(false)
+            // setOdd(false)
+            // setNonNumber(false)
 
             setEvenValue([
                 ...evenValue, {
@@ -142,9 +43,9 @@ const Check = () => {
                 }
             ])
         } else {
-            setEven(false)
             setOdd(true)
-            setNonNumber(false)
+            // setEven(false)
+            // setNonNumber(false)
 
             setOddValue([
                 ...oddValue, {
@@ -157,11 +58,14 @@ const Check = () => {
         // setOdd(true)
         // setNonNumber(true)
 
+    }
+    const handleShow = () => {
         if (input === "") {
             setEven(true)
             setOdd(true)
             setNonNumber(true)
         }
+        return
     }
 
 
@@ -180,6 +84,7 @@ const Check = () => {
                     <button type='submit ' className='bg-green-400 m-3 text-2xl p-4 rounded-lg'>
                         Submit
                     </button>
+                   
 
                 </form>
             </div>
@@ -190,7 +95,7 @@ const Check = () => {
                             <h3 className='font-bold'>Even Column Data</h3>
                             {
                                 evenValue.map((item, index) => (
-                                    <h3 key={index}>{item.input}</h3>
+                                    <h3 className='text-2xl text-center' key={index}>{item.input}</h3>
                                 ))
                             }
                         </div>
@@ -202,7 +107,7 @@ const Check = () => {
                             <h3 className='font-bold'>Odd Column Data</h3>
                             {
                                 oddValue.map((item, index) => (
-                                    <h3 key={index}>{item.input}</h3>
+                                    <h3 className='text-2xl text-center' key={index}>{item.input}</h3>
                                 ))
                             }
                         </div>
@@ -214,7 +119,7 @@ const Check = () => {
                             <h3 className='font-bold'>Not Number Column Data</h3>
                             {
                                 naNValue.map((item, index) => (
-                                    <h3 key={index}>{item.input}</h3>
+                                    <h3  className='text-2xl text-center' key={index}>{item.input}</h3>
                                 ))
                             }
                         </div>
