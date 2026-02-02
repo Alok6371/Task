@@ -75,7 +75,6 @@ const Check = () => {
                 <form action="" onSubmit={handleSubmit}
                     className=' '
                 >
-                    <h1>If want to Show all data then Click only Submit</h1>
                     <input type="text"
                         className='p-3 text-3xl border-2 border-black rounded-lg'
                         value={input}
